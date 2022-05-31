@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* variables */
+
+:root {
+    --primary: #0950c3;
+    --primary-gradient1: #588bde;
+    --primary-gradient2: #eae7e700;
+    --secondary: #0950c3;
+    --box-bg: #f6f6f6;
+    --font-color: #2b1e54;
+}
+
+body, input, text {
+    font-family: Raleway, serif !important;
+}
+
+/* box with small radius */
+
+div.is-small-rounded {
+    border-radius: 2rem;
+}
+
+/* disable down arrow displayed by bulma */
+
+.single-select:not(.is-multiple):not(.is-loading)::after {
+    display: none
+}
+
+/* make full width as 80% only as 100% wouldn't look good */
+
+.single-select.is-fullwidth {
+    width: 80%;
+}
+
+/* for box with shadow and radius */
+
+.main-column {
+    background-color: var(--box-bg);
+    margin: 0.5rem;
+    border-color: var(--box-bg);
+    border-radius: 2rem;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 3px 12px #00000029;
+}
+
+/* remove padding for column */
+
+.no-padding {
+    padding: 0;
+}
+
+/* modify is-5 feature of column */
+
+.column.is-5 {
+    width: 47%;
+}
+
+/* get max z-index */
+
+.max-z-index {
+    z-index: 10;
+}
+
+/* primary-font */
+
+.primary-font {
+    color: var(--primary);
+}
+
+.secondary-font {
+    color: var(--secondary);
+}
+
+.roboto-font {
+    font-family: Roboto, serif;
+}
+
+/* white-font*/
+
+.white-font {
+    color: black;
+}
+
+/* no hover for white font for links */
+
+a.white-font:hover {
+    color: black;
+}
+
+.small-padding-left {
+    padding-left: 0.5rem;
+}
+
+.medium-padding-left {
+    padding-left: 1rem;
+}
+
+.large-padding-left {
+    padding-left: 1.5rem;
+}
+
+input.is-fullwidth {
+    width: 100%;
+}
+
+.select2-selection, .select2-search__field {
+    text-align: center;
+    background-color: var(--primary);
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: white;
+}
+
+.group-padding {
+    padding: 0.5rem;
+}
+
+.hero-head {
+    background-image: linear-gradient(var(--primary-gradient1), var(--primary-gradient2));
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-center {
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.powered-by-group {
+    align-self: center;
+}
+
+.powered-by {
+    font-size: 10px;
+    font-weight: bold;
+    display: block;
+    margin-left: -5rem;
+    margin-bottom: -2rem;
+    margin-top: 1rem;
+}
+
+a.navbar-item:hover, .gnani-logo:hover {
+    background-color: var(--primary);
+}
+
+.navbar-item img {
+    max-height: 3rem;
+}
+
+div.buttons div.navbar-item {
+    padding-bottom: 1rem;
+}
+
+/* change bulma is-success tag to primary color */
+
+.tag:not(body).is-success {
+    background-color: var(--secondary);
+    color: white;
+}
+
+/* change bulma is-dark button colors to primary color */
+
+.button.is-dark.is-inactive, .button.is-dark:active, .button.is-dark.is-loading, .button.is-dark.is-active, .button.is-dark {
+    background-color: var(--secondary);
+    border-color: transparent;
+    color: white;
+}
+
+/* change bulma datetime colors to primary */
+
+.datetimepicker-dummy .datetimepicker-dummy-wrapper, .datetimepicker .datepicker-body .datepicker-dates .datepicker-days .datepicker-date .date-item {
+    border-color: var(--secondary);
+}
+
+.datetimepicker-dummy.is-success .datetimepicker-clear-button {
+    color: var(--secondary);
+}
+
+.datetimepicker-dummy.is-success::before, .datetimepicker-dummy.is-success:before, .datetimepicker.is-success .datepicker-nav {
+    background-color: var(--secondary);
+}
+
+/* change switch and checkbox colors to gray*/
+
+/*.switch[type=checkbox].is-success:checked + label::before, .switch[type=checkbox].is-success:checked + label:before {*/
+/*    background: gray;*/
+/*}*/
+
+/*.is-checkradio[type=checkbox]:checked + label::before, .is-checkradio[type=checkbox]:checked + label:before, .is-checkradio[type=radio]:checked + label::before, .is-checkradio[type=radio]:checked + label:before {*/
+/*    border: .1rem solid gray;*/
+/*}*/
+
+/*.is-checkradio[type=checkbox].is-success:checked + label::after, .is-checkradio[type=checkbox].is-success:checked + label:after {*/
+/*    border-color: gray !important;*/
+/*}*/
+
+/* change select2 colors to primary and gray to match */
+
+.select2-container--classic .select2-selection--multiple, .select2-selection .select2-selection--single, .select2-selection__rendered {
+    background-color: var(--primary);
+}
+
+.select2-search__field, .select2-container--classic .select2-selection--multiple .select2-selection__placeholder, .select2-container--classic .select2-selection--single .select2-selection__placeholder, .select2-container--classic .select2-selection--single .select2-selection__rendered {
+    color: white;
+}
+
+.select2-container--classic .select2-selection--multiple .select2-selection__rendered {
+    color: var(--primary)
+}
+
+.select2-container--classic .select2-selection--multiple .select2-selection__choice__remove, .select2-container--classic .select2-selection--single .select2-selection__clear {
+    color: #800000;
+}
+
+/* cursor pointer */
+.is-pointer {
+    cursor: pointer;
+}
+
+.navbar-item {
+    font-weight: bold;
+}
+
+select[multiple] + .select2.select2-container.select2-container--classic.select2-container--below {
+    overflow: auto;
+    max-height: 3rem;
+}
+
+a.navbar-item.gnani-logo:hover, a.navbar-item.gnani-logo:focus,
+.navbar-item > a:hover, .navbar-item > a:focus,
+.navbar-item > p:hover, .navbar-item > p:focus {
+    background: unset;
+    opacity: 0.83;
+}
+
+
+.switch[type=checkbox].is-link:checked + label::before,
+.switch[type=checkbox].is-link:checked + label:before {
+    background-color: var(--secondary);
+}
+
+.is-checkradio[type=checkbox].is-link:checked + label::after,
+.is-checkradio[type=checkbox].is-link:checked + label:after {
+    border-color: var(--primary) !important;
+}
+
+.is-checkradio[type=checkbox]:checked + label::before,
+.is-checkradio[type=checkbox]:checked + label:before,
+.is-checkradio[type=radio]:checked + label::before,
+.is-checkradio[type=radio]:checked + label:before,
+.is-checkradio[type=checkbox] + label::before,
+.is-checkradio[type=checkbox] + label:before,
+.is-checkradio[type=radio] + label::before,
+.is-checkradio[type=radio] + label:before {
+    border-color: var(--primary) !important;
+}
+
+.is-checkradio[type=checkbox].is-link:hover:not([disabled]) + label::before,
+.is-checkradio[type=checkbox].is-link:hover:not([disabled]) + label:before {
+    border-color: var(--primary) !important;
+    opacity: 8;
+}
+
+
+.is-place-content-center {
+    place-content: center;
+}

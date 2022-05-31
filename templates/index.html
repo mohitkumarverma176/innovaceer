@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+    <div class="columns">
+
+        <div class="control">
+            <div class="button is-medium is-link is-rounded-05"
+                 id="playlist-button"
+                 onclick="get_playlist()">
+                Get Playlist
+            </div>
+
+            <div class="button is-medium is-link is-rounded-05"
+                 id="playlist-button"
+                 onclick="create_playlist()">
+                Create Your Playlist
+            </div>
+             <div class="content is-medium has-text-weight-bold blue-font">
+                <p>Song Playlist: <b id="playlist" style="color: green"><i class="fas fa-spinner fa-pulse"></i></b>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
